@@ -8,5 +8,5 @@
 - requests
 - _sqlalchemy_
 
-### Поле[drivers](../../drivers)зные ссылки
+### Полезные ссылки
 - [Подсказка по markdown](https://www.markdownguide.org/basic-syntax/)
