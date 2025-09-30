@@ -14,26 +14,27 @@
 https://github.com/Lena-bit-lab/pytest_ui_api_template1/tree/main 
 Автотесты для API и UI-тестов для сайта YouGile (Система управления проектами для больших команд).
 
-Сайт: https://ru.yougile.com/
+[Сайт](https://ru.yougile.com/)
+
 
 ## Структура
-pages - классы
+_pages - классы_
 
 - pages/api_page.py
 - pages/main_page.py
-- 
-tests - тесты
+
+_tests - тесты_
 
 tests/test_api.py
 tests/test_ui.py
 
-pytest.ini - маркеры для запуска pytest
+_pytest.ini - маркеры для запуска pytest_
 
-README.md - отчет-инструкция к работе
+_README.md - отчет-инструкция к работе_
 
-config.py - конфигурации
+_config.py - конфигурации_
 
-requirements.txt - зависимости
+_requirements.txt - зависимости_
 
 ## Инструкция по работе с тестами
 ### Запуск API тестов:
