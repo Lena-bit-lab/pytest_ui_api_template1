@@ -13,7 +13,8 @@
 [Финальная работа по ручному тестированию]
 (https://github.com/Lena-bit-lab/pytest_ui_api_template1/tree/main) 
 
-Автотесты для API и UI-тестов для сайта YouGile (Система управления проектами для больших команд).
+Автотесты для API и UI-тестов для сайта YouGile 
+(Система управления проектами для больших команд)
 
 [Сайт](https://ru.yougile.com/)
 
@@ -59,5 +60,3 @@ tests/test_ui.py --alluredir=./allure_result_ui
 - allure - инструмент для генерации отчетов о выполнении тестов
 
 
-## Полезные ссылки
-- [Подсказка по markdown](https://www.markdownguide.org/basic-syntax/)

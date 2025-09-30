@@ -1,9 +1,9 @@
 import pytest
-import allure
+#import allure
 from pages.main_page import MainPage
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
+#from selenium.webdriver.common.by import By
+#from selenium.webdriver.support.ui import WebDriverWait
 
 
 @pytest.fixture
@@ -17,4 +17,3 @@ def test_mytask(driver):
     page = MainPage(driver)
     page.open()
     page.check()
-
