@@ -10,8 +10,9 @@
 - Установка библиотек
 
 ## Описание
-[Финальная работа по ручному тестированию]
-(https://github.com/Lena-bit-lab/pytest_ui_api_template1/tree/main) 
+Финальная работа по ручному тестированию
+
+https://github.com/Lena-bit-lab/pytest_ui_api_template1/tree/main 
 
 Автотесты для API и UI-тестов для сайта YouGile 
 (Система управления проектами для больших команд)
