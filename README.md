@@ -12,7 +12,7 @@
 ## Описание
 Финальная работа по ручному тестированию
 
-https://github.com/Lena-bit-lab/pytest_ui_api_template1/tree/main 
+https://github.com/Lena-bit-lab/pytest_ui_api_template1
 
 Автотесты для API и UI-тестов для сайта YouGile 
 (Система управления проектами для больших команд)
@@ -23,13 +23,13 @@ https://github.com/Lena-bit-lab/pytest_ui_api_template1/tree/main
 ## Структура
 _pages - классы_
 
-- pages/api_page.py
+- pages/AuthPage.py
 - pages/main_page.py
 
 _tests - тесты_
 
-- tests/test_api.py
-- tests/test_ui.py
+- test/test_api.py
+- test/test_ui.py
 
 _pytest.ini - маркеры для запуска pytest_
 
