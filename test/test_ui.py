@@ -1,19 +1,26 @@
 import pytest
 #import allure
-from pages.main_page import MainPage
+from pages.main_page import Mytask
+from pages.AuthPage import AuthPage
 from selenium import webdriver
-#from selenium.webdriver.common.by import By
-#from selenium.webdriver.support.ui import WebDriverWait
 
 
 @pytest.fixture
+
 def driver():
     driver = webdriver.Chrome()
-    page = MainPage(driver)
     yield driver
     driver.quit()
 
 def test_mytask(driver):
-    page = MainPage(driver)
+    authpage = AuthPage(driver)
+    authpage.open()
+    page = Mytask(driver)
+    page.open()
+    page.check()
+
+
+def test_auth_page(driver):
+    page = AuthPage(driver)
     page.open()
     page.check()

@@ -1,51 +1,28 @@
 import allure
-from selenium.webdriver.common.by import By
-from selenium.webdriver.remote.webdriver import WebDriver
+from selenium import webdriver
+#from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-#from configuration.ConfigProvider import ConfigProvider
-
+from selenium.webdriver.common.by import By
 
 class AuthPage:
     """Класс предоставляет методы для работы со страницей авторизации приложения"""
 
-    # def __init__(self, driver: WebDriver) -> None:
-    #     self.__url = ConfigProvider().get("ui", "ui_auth_url")
-    #     self.__driver = driver
+    def __init__(self, driver):
+        self.driver = driver
+    def open(self):
+        self.driver.get("https://ru.yougile.com")
+        self.entrance_button = self.driver.find_element(By.CLASS_NAME, "btn-outline-primary")
+        self.entrance_button.click()
+        self.wait = WebDriverWait(self.driver, 5)
+        self.username_field = self.driver.find_element(By.CSS_SELECTOR, "email")
+        self.password_field = self.driver.find_element(By.CSS_SELECTOR, "password")
+        self.login_button = self.driver.find_element(By.CLASS_NAME, "gap-4 cursor-pointer")
 
-    @allure.step("Перейти на страницу авторизации")
-    def go(self):
-        self.__driver.get("https://ru.yougile.com")
+        self.username_field.send_keys("sulatomato@tiffincrane.com")
+        self.password_field.send_keys("sulatomato")
+        self.login_button.click()
 
-    # def open(self):
-    #     self.driver.get("https://ru.yougile.com")
-
-
-    @allure.step("Авторизоваться под {sulatomato@tiffincrane.com}:{sulatomato}")
-    def login_as(self, email: str, password: str):
-
-            with allure.step("Заполнить поле 'E-mail:'sulatomato@tiffincrane.com"):
-                self.__driver.find_element(By.CSS_SELECTOR, '[type="email"]').send_keys(email)
-            with allure.step("Заполнить поле 'Пароль:'sulatomato"):
-                self.__driver.find_element(By.CSS_SELECTOR, '[type="password"]').send_keys(password)
-            with allure.step("Нажать кнопку 'Войти'"):
-                self.__driver.find_element(By.CSS_SELECTOR, '[role="button"]').click()
-
-    @allure.step("Получить текущий URL")
-    def get_current_url(self) -> str:
-        # Вернем текущий url
-        return self.__driver.current_url
-
-    # @allure.step("Получить название компании пользователя")
-    # def current_company(self) -> str:
-    #     element = self.__driver.find_element(By.CSS_SELECTOR, ".mr-6.whitespace-nowrap.h1-semibold").text
-    #     return element
-
-    @allure.step("Открыть страницу сайта с меню")
-    # def open_project(self, name: str):
-    #     locator = f"'div[title=\"{name}\"]'"
-    #     print(locator)
-    #     self.__driver.find_element(By.CSS_SELECTOR, 'div[title="Clark and Sons"]').click()
-    #
     def check(self):
         assert (self.driver.current_url == "https://ru.yougile.com/team")
+
+    #with allure.step("Открыть страницу сайта с меню"):
