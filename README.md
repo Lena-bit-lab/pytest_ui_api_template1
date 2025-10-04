@@ -1,6 +1,6 @@
 # pytest_ui_api_template1
 
-# Дипломная работа на Python по Yougile
+# Дипломная работа на Python по YouGile
 
 ## Оглавление
 - Описание
@@ -25,6 +25,9 @@ _pages - классы_
 
 - pages/AuthPage.py
 - pages/main_page.py
+- pages/profile_page.py
+- pages/projects_page.py
+- pages/sample_page.py
 
 _tests - тесты_
 
@@ -43,13 +46,13 @@ _requirements.txt - зависимости_
 ### Запуск API тестов:
 
 1. Команда pytest 
-tests/test_api.py --alluredir=./allure_result_api
+test/test_api.py --alluredir=./allure_result_api
 2. После завершения тестирования вводим команду allure serve allure_result_api для просмотра отчета о тестировании
 
 ### Запуск UI тестов:
 
 1. Команда pytest 
-tests/test_ui.py --alluredir=./allure_result_ui
+test/test_ui.py --alluredir=./allure_result_ui
 2. После завершения тестирования вводим команду allure serve allure_result_ui для просмотра отчета о тестировании
 
 
