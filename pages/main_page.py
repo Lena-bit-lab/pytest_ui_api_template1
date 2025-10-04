@@ -1,6 +1,7 @@
 import allure
 from selenium.webdriver.common.by import By
-
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class Mytask:
     """Класс предоставляет методы для работы со страницей Мои задачи приложения"""
@@ -12,10 +13,9 @@ class Mytask:
             self.driver.get("https://ru.yougile.com/team")
 
         with allure.step("Нажимаем на кнопку Мои задачи"):
-            elements = self.driver.find_element(By.CLASS_NAME,
-                                          "text-panel-text-primary")
-        button = elements[0]
-        button.click()
+            wait = WebDriverWait(self.driver, 60)
+            button = wait.until(EC.element_to_be_clickable((By.XPATH, "//div[normalize-space(text())='Мои задачи']")))
+            button.click()
 
     def check(self):
             with allure.step("Проверяем переход на страницу Мои задачи"):
